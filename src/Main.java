@@ -6,6 +6,10 @@ import java.nio.file.Path;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
+
+        if(true){
+            System.out.println("if statement executed");
+        }
     }
 
     private static void extractFile(Path zipFile, String fileName, Path outputFile) throws IOException {
