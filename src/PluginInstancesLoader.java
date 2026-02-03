@@ -56,6 +56,7 @@ public class PluginInstancesLoader {
 //  private static final SonarLintLogger LOG = SonarLintLogger.get();
 
   private static final String[] DEFAULT_SHARED_RESOURCES = {"org/sonar/plugins", "com/sonar/plugins", "com/sonarsource/plugins"};
+  private static final String hello = "Hello";
 
 //  private final PluginClassloaderFactory classloaderFactory;
 //  private final ClassLoader baseClassLoader;
