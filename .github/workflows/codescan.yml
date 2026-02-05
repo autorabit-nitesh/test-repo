@@ -39,6 +39,9 @@ jobs:
           projectKey: test-nitesh
           login: squ_8bc43395775b0bf257a04aa052d1ad912b352847
           failOnRedQualityGate: false 
+          generateSarifFile: true
+          args: | 
+            sonar.java.binaries=.
       - name: Run Codescan On PR 
         if: github.event_name == 'pull_request' 
         uses: codescan-io/codescan-scanner-action@prerelease-test
