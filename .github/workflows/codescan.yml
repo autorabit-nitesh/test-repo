@@ -40,7 +40,6 @@ jobs:
           login: squ_6e202e8f5c86bc80dff610ad292677b55169b95e
           failOnRedQualityGate: false 
           generateSarifFile: true
-          generateReportFile: false
           args: | 
             sonar.java.binaries=.
       - name: Run Codescan On PR 
