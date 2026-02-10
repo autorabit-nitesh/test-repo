@@ -49,6 +49,8 @@ jobs:
           generateSarifFile: true
           args: | 
             sonar.java.binaries=.
+            codescan.reports.enabled=true
+            codescan.reports.types=sarif
       - name: Run Codescan On PR 
         if: github.event_name == 'pull_request' 
         uses: codescan-io/codescan-scanner-action@prerelease-test
