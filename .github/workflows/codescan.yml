@@ -35,7 +35,7 @@ jobs:
       - name: Download SonarScanner CLI version 5.0.1
         run: |
           SCANNER_VERSION=5.0.1
-          curl -L -o sonar-scanner.zip "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SCANNER_VERSION-linux.zip%22
+          curl -L -o sonar-scanner.zip "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SCANNER_VERSION-linux.zip"
           unzip sonar-scanner.zip
           echo "SONAR_SCANNER_HOME=$PWD/sonar-scanner-$SCANNER_VERSION-linux" >> $GITHUB_ENV
           echo "$SONAR_SCANNER_HOME/bin" >> $GITHUB_PATH
