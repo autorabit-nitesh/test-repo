@@ -4,8 +4,6 @@ on:
     branches: [master] 
   pull_request: 
     branches: [master] 
-env: 
-  SONAR_SCANNER_VERSION: 5.0.1.3006
 jobs: 
   build: 
     runs-on: ubuntu-latest 
@@ -34,7 +32,7 @@ jobs:
             restore-keys: ${{ runner.os }}-sonar      
       - name: Download SonarScanner CLI version 5.0.1
         run: |
-          SCANNER_VERSION=5.0.1
+          SCANNER_VERSION=5.0.1.3006
           curl -L -o sonar-scanner.zip "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SCANNER_VERSION-linux.zip"
           unzip sonar-scanner.zip
           echo "SONAR_SCANNER_HOME=$PWD/sonar-scanner-$SCANNER_VERSION-linux" >> $GITHUB_ENV
