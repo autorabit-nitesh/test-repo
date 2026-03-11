@@ -41,10 +41,10 @@ jobs:
         if: github.event_name == 'push' 
         uses: codescan-io/codescan-scanner-action@prerelease-test
         with: 
-          codeScanUrl: http://localhost:3000
+          codeScanUrl: https://staging.codescan.io/
           organization: test-nitesh
           projectKey: test-git-1
-          login: squ_bf4f843cb7bad09c79ca64a537baf5d1c3faa552
+          login: squ_11ef3cb673cfc705f54180e5cfea7cbea042ce96
           failOnRedQualityGate: false 
           generateSarifFile: true
           args: | 
