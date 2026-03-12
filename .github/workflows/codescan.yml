@@ -46,7 +46,7 @@ jobs:
           projectKey: test-git-1
           login: squ_11ef3cb673cfc705f54180e5cfea7cbea042ce96
           failOnRedQualityGate: false 
-          generateSarifFile: true
+          generateSarifFile: false
           args: | 
             sonar.java.binaries=.
       - name: Run Codescan On PR 
