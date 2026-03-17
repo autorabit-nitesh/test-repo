@@ -12,6 +12,8 @@ public class Main {
         try (var fileSystem = FileSystems.newFileSystem(zipFile, (ClassLoader) null)) {
             var fileToExtract = fileSystem.getPath(fileName);
             Files.copy(fileToExtract, outputFile);
+            System.out.println("Hello, World!!!!!");
+            System.out.println("Hello, World!!!!!");
         }
     }
 }
