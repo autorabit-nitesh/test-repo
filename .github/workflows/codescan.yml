@@ -41,12 +41,12 @@ jobs:
         if: github.event_name == 'push' 
         uses: codescan-io/codescan-scanner-action@prerelease-test
         with: 
-          codeScanUrl: https://staging.codescan.io/
-          organization: test-nitesh
+          codeScanUrl: https://preview.codescan.io/
+          organization: nkar
           projectKey: test-git-1
-          login: squ_11ef3cb673cfc705f54180e5cfea7cbea042ce96
+          login: squ_6e202e8f5c86bc80dff610ad292677b55169b95e
           failOnRedQualityGate: false 
-          generateSarifFile: false
+          generateSarifFile: true
           args: | 
             sonar.java.binaries=.
       - name: Run Codescan On PR 
