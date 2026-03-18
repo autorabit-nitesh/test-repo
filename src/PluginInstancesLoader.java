@@ -139,6 +139,7 @@ public class PluginInstancesLoader {
     try (var fileSystem = FileSystems.newFileSystem(zipFile, (ClassLoader) null)) {
       var fileToExtract = fileSystem.getPath(fileName);
       Files.copy(fileToExtract, outputFile);
+      System.out.print("Hello");
     }
   }
 
