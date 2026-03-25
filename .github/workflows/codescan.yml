@@ -39,7 +39,7 @@ jobs:
           echo "$SONAR_SCANNER_HOME/bin" >> $GITHUB_PATH
       - name: Run Codescan On Push 
         if: github.event_name == 'push' 
-        uses: codescan-io/codescan-scanner-action@prerelease-test
+        uses: codescan-io/codescan-scanner-action@1.6
         with: 
           codeScanUrl: https://preview.codescan.io/
           organization: nkar
