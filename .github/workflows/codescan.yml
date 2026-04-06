@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
-          java-version: 17
+          java-version: 11
       - name: Verify Java installation
         run: java -version
       - name: Set JAVA_HOME environment variable
@@ -30,9 +30,9 @@ jobs:
                 ~/.sonar 
             key: ${{ runner.os }}-sonar 
             restore-keys: ${{ runner.os }}-sonar      
-      - name: Download SonarScanner CLI version 5.0.1
+      - name: Download SonarScanner CLI version 4.7.0
         run: |
-          SCANNER_VERSION=5.0.1.3006
+          SCANNER_VERSION=4.7.0.2747
           curl -L -o sonar-scanner.zip "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SCANNER_VERSION-linux.zip"
           unzip sonar-scanner.zip
           echo "SONAR_SCANNER_HOME=$PWD/sonar-scanner-$SCANNER_VERSION-linux" >> $GITHUB_ENV
