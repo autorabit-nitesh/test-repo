@@ -53,7 +53,7 @@ jobs:
           codeScanUrl: https://preview.codescan.io
           organization: nkar
           projectKey: test-git-1
-          login: squ_6e202e8f5c86bc80dff610ad292677b55169b95e
+          token: squ_6e202e8f5c86bc80dff610ad292677b55169b95e
           failOnRedQualityGate: false 
           generateSarifFile: true
           args: | 
