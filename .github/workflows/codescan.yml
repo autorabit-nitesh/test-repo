@@ -50,10 +50,10 @@ jobs:
         if: github.event_name == 'push' 
         uses: codescan-io/codescan-scanner-action@1.6
         with: 
-          codeScanUrl: https://preview.codescan.io/
-          organization: nkar
+          codeScanUrl: http://localhost:3000/
+          organization: test-nitesh
           projectKey: test-git-1
-          login: squ_6e202e8f5c86bc80dff610ad292677b55169b95e
+          login: squ_f5a36698c3d118d9fbb1563872643ecc5122ade9
           failOnRedQualityGate: false 
           generateSarifFile: true
           args: | 
@@ -77,7 +77,3 @@ jobs:
         with:
             name: codescan.sarif
             path: codescan.sarif
-      - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v4
-        with:
-          sarif_file: codescan.sarif
