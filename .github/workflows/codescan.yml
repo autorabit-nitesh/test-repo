@@ -1,6 +1,6 @@
 name: CI
 env:
-    SONAR_SCANNER_VERSION: 7.2
+    SONAR_SCANNER_VERSION: 7.2.0.5079
 on:
   push:
     branches:
@@ -23,7 +23,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # or the version you need
+          node-version: '20'  # or the version you need
       - name: Cache files
         uses: actions/cache@v4
         with:
