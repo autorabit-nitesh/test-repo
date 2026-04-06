@@ -42,7 +42,6 @@ jobs:
             restore-keys: ${{ runner.os }}-sonar
       - name: Download SonarScanner CLI version 5.0.1
         run: |
-          set -e
           curl -L -o sonar-scanner.zip "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-windows.zip"
           unzip sonar-scanner.zip
           echo "SONAR_SCANNER_HOME=$PWD/sonar-scanner-5.0.1.3006-windows" >> $GITHUB_ENV
