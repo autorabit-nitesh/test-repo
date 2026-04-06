@@ -16,8 +16,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout repository 
         uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # or the version you need
       - name: Cache files
         uses: actions/cache@v4
         with:
