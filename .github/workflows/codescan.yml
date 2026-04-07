@@ -41,6 +41,7 @@ jobs:
             key: ${{ runner.os }}-sonar 
             restore-keys: ${{ runner.os }}-sonar
       - name: Download SonarScanner CLI version 5.0.1
+        shell: bash
         run: |
           SCANNER_VERSION=5.0.1.3006
           curl -L -o sonar-scanner.zip "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SCANNER_VERSION-windows.zip"
