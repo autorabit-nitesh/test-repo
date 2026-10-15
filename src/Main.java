@@ -20,5 +20,10 @@ public class Main {
 
             System.out.print("Print another something");
         }
+        System.out.print("Print another something");
+
+        int i =10;
+
+        System.out.print("Print another something");
     }
 }
